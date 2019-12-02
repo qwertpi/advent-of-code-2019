@@ -8,7 +8,7 @@ def fuel_calc(mass)
 end
 
 total_fuel = 0
-File.open("input.txt", "r").each_line do |line|
+for line in File.open("input.txt", "r").each_line do
     new_fuel = fuel_calc(line)
     while new_fuel > 0
         total_fuel += new_fuel
